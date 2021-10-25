@@ -19,8 +19,10 @@ body{
   cursor: pointer;
   width: 100px;
   text-align: center;
+  transition: background 1s, transform 1s 1s ease;
 }
 
 .circle:hover{
-  background:salmon
+  background:salmon;
+  transform: rotate(360deg);
 }
