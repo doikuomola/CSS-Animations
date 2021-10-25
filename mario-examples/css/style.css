@@ -54,9 +54,19 @@ body {
 }
 
 
+.luigi{
+  position: absolute;
+  left: -150px;
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+}
+
 /*// KEYFRAMES //*/
 
 @keyframes drive {
-  from{ transfor: translateX(-200px)}
+  from{ transfor: translateX(-250px)}
   to{ transform: translateX(1300px)}
 }
