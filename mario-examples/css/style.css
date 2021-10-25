@@ -50,13 +50,13 @@ body {
   animation-name: drive;
   animation-duration: 3s;
   animation-fill-mode: both;
-  animation-delay: 2s;
+  animation-iteration-count: infinite;
 }
 
 
 /*// KEYFRAMES //*/
 
 @keyframes drive {
-  from{ transfor: translateX(0)}
-  to{ transform: translateX(900px)}
+  from{ transfor: translateX(-200px)}
+  to{ transform: translateX(1300px)}
 }
