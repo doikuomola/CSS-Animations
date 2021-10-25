@@ -47,11 +47,8 @@ body {
   position: absolute;
   top:-150px;
   left: -150px;
-  animation-name: drive;
-  animation-duration: 3s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: drive 3s both infinite linear, 
+              jump 0.4s 1.2s ease;
 }
 
 
@@ -99,4 +96,10 @@ body {
 @keyframes wind {
   from{left: -300px}
   to{left: 100%}
+}
+
+@keyframes jump {
+  0%{ top:-150px }
+  50%{ top: -300px }
+  100%{ top: -150px }
 }
