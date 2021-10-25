@@ -1,0 +1,26 @@
+body{
+  background: lightblue;
+  text-align: center;
+}
+
+.wrapper{
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.circle{
+  color: white;
+  padding: 50px 0;
+  line-height:0;
+  margin: 50px auto;
+  background: pink;
+  border-radius: 50px;
+  cursor: pointer;
+  width: 100px;
+  text-align: center;
+}
+
+.circle:hover{
+  background:salmon
+}
