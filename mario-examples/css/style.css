@@ -1,145 +1,71 @@
-/*// POP-UP BASE STYLES //*/
-
 body {
-  margin: 0;
-  position: relative;
+  background: #333;
+  font-family: verdana;
 }
 
-body.pop-up {
-  background: #222;
-}
-
-* {
-  font-family: Calibri, sans-serif;
-  font-weight: normal;
-  color: #333;
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
 }
 
 h1 {
-  font-size: 48px;
-  margin: 10px 0;
-}
-
-p {
-  margin-bottom: 40px;
-}
-
-#pop-up {
-  position: relative;
-  top: 200px;
-  width: 500px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#pop-up .container {
-  background: #f0e4d4;
-  padding: 30px;
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-#pop-up input {
-  padding: 10px;
-  border: 0;
-  border-radius: 10px 0 0 10px;
-  border: 1px solid #333;
-  font-size: 18px;
-}
-
-button {
-  padding: 10px;
-  border: 0;
   color: #fff;
-  background: #333;
-  margin-left: -5px;
-  margin-left: -5px;
-  border-radius: 0 10px 10px 0;
-  border: 1px solid #333;
-  font-size: 18px;
-}
-
-.cross {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #555;
-  color: #ddd;
-  font-weight: bold;
-  width: 22px;
-  height: 22px;
+  font-weight: normal;
   text-align: center;
-  border-radius: 11px;
+  font-size: 48px;
 }
 
-/*// POP-UP ANIMATION STYLES //*/
-
-
-/*// BASKET BASE STYLES //*/
-
-header {
-  padding: 10px 20px;
-  border-bottom: 1px solid #eee;
-  background: #fff;
-}
-
-header:after {
-  display: block;
-  content: "";
-  clear: both;
-}
-
-.basket ul {
-  padding: 0;
-  margin-top: 40px;
-}
-
-.basket li {
-  display: inline-block;
+.panels {
   list-style-type: none;
-  width: 30%;
-  margin: 30px 1.5%;
-  text-align: center;
+  padding: 0;
 }
 
-.basket button {
-  border-radius: 10px;
+.panels li {
+  position: relative;
+  width: 25%;
+  margin: 0;
+  display: block;
+  box-sizing: border-box;
+  float: left
+}
+
+.panels li div {
+  width: 100%;
+  padding: 50% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 0;
   cursor: pointer;
 }
 
-.basket header div {
-  float: right;
-  position: relative;
-  z-index: 1;
+/*// ANIMATION STYLES //*/
+
+.panels div.back {
+  transform: rotateY(90deg)
 }
 
-.basket header h1 {
-  float: left;
-}
-
-/*// BASKET ANIMATION STYLES //*/
-.zoom {
+.panels div.front {
   position: absolute;
-  top: 40px;
-  right: 50%;
-  width: 40px;
-  animation: zoom 1.5s ease forwards;
 }
 
+.panels li:hover div.front {
+  animation: twirl 0.2s ease-in forwards;
+}
 
-@keyframes zoom {
+.panels li:hover div.back {
+  animation: twirl 0.2s 0.2s ease-out forwards reverse;
+}
+
+@keyframes twirl {
   0% {
-    opacity: 0
-  }
-
-  50% {
-    opacity: 1
+    transform: rotateY(0deg)
   }
 
   100% {
-    opacity: 0;
-    right:40px
+    transform: rotateY(90deg)
   }
 }
